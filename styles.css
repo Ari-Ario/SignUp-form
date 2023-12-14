@@ -1,7 +1,7 @@
 :root {
 	--dark: #05152E;
 	--darker: #1F2937;
-	/* --darkest: #001E3C; */
+	--darkest: #001E3C;
 	--grey: #6B7280;
 	--pink: #EC4899;
 	--purple: #8B5CF6;
@@ -17,14 +17,18 @@
 body {
 	display: flex;
 	flex-direction: column;
+    justify-content: center;
+    align-items: center;
 	min-height: 100vh;
 	color: #FFF;
-	background-color: var(--dark);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+	background-color: var(--light);
 }
 
 .signup-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
 }
 
 .signup-page {
@@ -32,19 +36,45 @@ body {
     /* min-height: 100vh; */
     padding: 20px;
     box-sizing: border-box;
+    height: 100%;
+    max-width: 460px;
+    max-height: 100vh;
 }
 #page1 {
     display: block;
     text-align: center;
 }
 
-#page2, #page3, #page4, #page5 {
+#page2, #page3, #page4, #page5, #page6 {
     display: none;
 }
 
-/* .active {
+.form {
     display: block;
-} */
+    text-align: left;
+    padding: 40px;
+    box-sizing: border-box;
+    float: left;
+    clear: both;
+}
+.el {
+    margin-top: 3vw;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    border-radius: 10px;
+}
+#sign-in {
+    background-color: blue;
+    color: white;
+}
+#gmail-sign-in {
+    background-color: darkred;
+    color: white;
+}
 
+#el:hover {
+	opacity: 0.8;
+}
 
-
+/* https://blog.openreplay.com/building-a-mobile-app-using-html-css-and-js/
+ */

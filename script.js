@@ -25,3 +25,12 @@ function submitForm() {
     // Add form submission logic here
     alert('Form submitted successfully!');
 }
+function previewForm() {
+    const allPages = document.getElementById(`page${currentPage}`);
+    allPages.style.display = "none";
+    currentPage++;
+    const newPage = document.getElementById(`page${currentPage}`)
+    newPage.style.display = "block";
+    newPage.style.textAlign = "center"
+    newPage.style.backgroundColor= "brown"
+}
