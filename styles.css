@@ -86,7 +86,9 @@ body {
     border-radius: 10px;
 }
 
-#or { text-align: center; }
+#or {
+    text-align: center;
+}
 
 #sign-in {
     background-color: var(--darklight);
@@ -97,19 +99,11 @@ body {
     color: white;
 }
 
-#address {
+.agb, .news {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: fit-content;
+    grid-column-start: auto;
 }
-#agb-news {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: fit-content;
-}
-/* .address {
-    max-width: 20px;
-} */
 
 .el:hover {
 	opacity: 0.8;

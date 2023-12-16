@@ -20,22 +20,14 @@ function secondPage(){
     newPage.style.textAlign = "center";
 }
 
+// extra method, in case you go back step by step instead of jumping to second page
 function prevPage() {
     if (currentPage > 1) {
         currentPage--;
-        updatePage();
+        // updatePage();
     }
 }
 
-/* function updatePage() {
-    const container = document.querySelector('.signup-container');
-    container.style.transform = `translateX(${-100 * (currentPage - 1)}%)`;
-} */
-
-function submitForm() {
-    // Add form submission logic here
-    alert('Form submitted successfully!');
-}
 function previewForm() {
     const allPages = document.getElementById(`page${currentPage}`);
     allPages.style.display = "none";
@@ -45,6 +37,9 @@ function previewForm() {
     newPage.style.textAlign = "center"
     newPage.style.backgroundColor= "brown"
 }
+
+
+// to call the functions with buttons (second method)
 
 // function btnMouseOut(btn) {
 //     btn.style.backgroundColor ="blue"

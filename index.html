@@ -18,7 +18,7 @@
     <main class="signup-container" id="all-pages">
         <section class="signup-page" id="page1">
             <!-- Page 1 content -->
-            <!-- Your form fields for step 1 -->
+            <!-- form fields for step 1 -->
             <form action="" class="form" id="form1" method="post">
                 <section id="logo1">
                     <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,6 +43,7 @@
 
         <section class="signup-page" id="page2">
             <!-- Page 2 content -->
+            <!-- form fields for step 5 -->
             <form action="" class="form" id="form2" method="post">
                 <section id="logo2">
                     <svg width="50" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +87,7 @@
         
         <section class="signup-page" id="page3">
             <!-- Page 3 content -->
-            <!-- Your form fields for step 3 -->
+            <!-- form fields for step 3 -->
             <form action="" class="form" id="form3" method="post">
                 <section id="logo2">
                     <svg width="50" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,15 +114,13 @@
                     <label for="tel-p">Telefon P:</label>
                     <input class="el" type="tel" id="tel-p" placeholder="ari@ario.ch">
                 </section>
-                <section class="pairs" id="agb-news">
-                    <section class="agb-news">
-                        <label for="agb">AGB:</label>
-                        <input class="el" type="radio" id="agb" placeholder="8004">
-                    </section>
-                    <section class="agb-news">
-                        <label for="newsletter">Newsletter:</label>
-                        <input class="el" type="text" id="newsletter" placeholder="">
-                    </section>
+                <section class="agb">
+                    <label for="agb">AGB:</label>
+                    <input class="el" type="radio" id="agb">
+                </section>
+                <section class="news">
+                    <label for="newsletter">Newsletter:</label>
+                    <input class="el" type="checkbox" id="newsletter">
                 </section>
                 <section class="pairs">
                     <label for="remark">Bemerkung:</label>
@@ -131,11 +130,10 @@
             </form>
         </section>
 
-
         <section class="signup-page" id="page4">
             <!-- Page 4 content -->
             <h2>Step 4: </h2>
-            <!-- Your form fields for step 4 -->
+            <!-- form fields for step 4 -->
             <form action="" class="form" id="form3" method="post">
                 <section id="logo2">
                     <svg width="50" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,14 +161,13 @@
                 </section>
 
                 <input class="el" id="back" type="button" value="zurück" onclick="secondPage()" onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='#EEE'">
-                <input class="el" type="button" value="submit" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                <input class="el" type="button" value="Absenden" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
             </form>
         </section>
 
         <section class="signup-page" id="page5">
             <!-- Page 5 content -->
-            <h2>Dein Form wurde Erfolgreich eingereicht </h2>
-            <!-- Your form fields for step 5 -->
+            <p>Dein Form wurde Erfolgreich eingereicht.</p>
         </section>
         
     </main>
