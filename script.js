@@ -48,3 +48,16 @@ function previewForm() {
 // function btnMouseOut(btn) {
 //     btn.style.backgroundColor ="#FFF"
 // }
+
+function changeToEnglish(lang){
+    const language= document.getElementById("language");
+    const selectedLanguage = language.value;
+    const email = document.getElementById("email")
+    console.log(lang.value)
+
+     if (lang.value === "en") {
+        email.innerHTML = "English mail"
+    } else if (lang.value === "de") {
+        location.reload();
+    }
+}
