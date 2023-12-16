@@ -1,4 +1,5 @@
 :root {
+    --darklight: #0145a4;
 	--dark: #05152E;
 	--darker: #1F2937;
 	--darkest: #001E3C;
@@ -28,53 +29,130 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* display: block;
+    text-align: center; */
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    max-height: 80vh;
+    min-height: 80vh;
+    border-radius: 20px;
     background-color: var(--dark);
 }
 
 .signup-page {
-    flex: 1;
-    /* min-height: 100vh; */
-    padding: 20px;
-    box-sizing: border-box;
+    /* flex: 1; */
+    display: flex;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
     height: 100%;
-    max-width: 460px;
+    max-width: 440px;
     max-height: 100vh;
 }
-#page1 {
-    display: block;
-    text-align: center;
-}
 
-#page2, #page3, #page4, #page5, #page6 {
+#page2, #page3, #page4, #page5 {
     display: none;
 }
 
 .form {
     display: block;
     text-align: left;
-    padding: 40px;
+    padding: 30px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
     float: left;
     clear: both;
 }
+
+#logo1{
+    text-align: center;
+    margin-bottom: 78px;
+}
+#logo2 {
+    text-align: center;
+}
+
+.pairs {
+    margin: 10px 0 10px 0;
+}
+
 .el {
-    margin-top: 3vw;
+    margin-top: 2vw;
     width: 100%;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0 5px 0;
     border-radius: 10px;
 }
+
+#or { text-align: center; }
+
 #sign-in {
-    background-color: blue;
+    background-color: var(--darklight);
     color: white;
 }
 #gmail-sign-in {
-    background-color: darkred;
+    background-color: #db4a39;
     color: white;
 }
 
-#el:hover {
+#address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: fit-content;
+}
+#agb-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: fit-content;
+}
+/* .address {
+    max-width: 20px;
+} */
+
+.el:hover {
 	opacity: 0.8;
 }
 
-/* https://blog.openreplay.com/building-a-mobile-app-using-html-css-and-js/
- */
+
+ @media screen and (max-width: 768px) {
+
+    body {
+        background-color: var(--dark);
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .signup-container {
+        border-radius: 0px;
+        height: 100vh;
+    }
+
+    .form {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .pairs {
+        margin: 10px 0 10px 0;
+    }
+
+    #address {
+        grid-template-columns: 1fr;
+    }
+
+    .el {
+        margin: 10px 0 10px 0;
+        width: 100%;
+        min-width: 300px;
+        min-height: 30px;
+    }
+  }

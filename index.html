@@ -18,49 +18,117 @@
     <main class="signup-container" id="all-pages">
         <section class="signup-page" id="page1">
             <!-- Page 1 content -->
-            <div id="logo">
-                <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="50" cy="40" rx="50" ry="40" fill="#FAFF00"/>
-                    <path d="M15.8011 53.1818H9L17.8338 27H26.2585L35.0923 53.1818H28.2912L22.142 33.5966H21.9375L15.8011 53.1818ZM14.8935 42.8778H29.1094V47.6847H14.8935V42.8778Z" fill="black"/>
-                    <path d="M37.9112 53.1818V27H48.7266C50.6868 27 52.3786 27.3835 53.8018 28.1506C55.2337 28.9091 56.3374 29.9702 57.1129 31.3338C57.8885 32.6889 58.2763 34.2656 58.2763 36.0639C58.2763 37.8707 57.88 39.4517 57.0874 40.8068C56.3033 42.1534 55.1825 43.1974 53.7251 43.9389C52.2678 44.6804 50.5376 45.0511 48.5348 45.0511H41.8615V40.0653H47.3587C48.3132 40.0653 49.1101 39.8991 49.7493 39.5668C50.397 39.2344 50.8871 38.7699 51.2195 38.1733C51.5518 37.5682 51.718 36.8651 51.718 36.0639C51.718 35.2543 51.5518 34.5554 51.2195 33.9673C50.8871 33.3707 50.397 32.9105 49.7493 32.5866C49.1016 32.2628 48.3047 32.1009 47.3587 32.1009H44.2393V53.1818H37.9112Z" fill="black"/>
-                    <path d="M61.3956 53.1818V27H72.2109C74.1712 27 75.8629 27.3835 77.2862 28.1506C78.718 28.9091 79.8217 29.9702 80.5973 31.3338C81.3729 32.6889 81.7607 34.2656 81.7607 36.0639C81.7607 37.8707 81.3643 39.4517 80.5717 40.8068C79.7876 42.1534 78.6669 43.1974 77.2095 43.9389C75.7521 44.6804 74.022 45.0511 72.0192 45.0511H65.3459V40.0653H70.843C71.7976 40.0653 72.5945 39.8991 73.2337 39.5668C73.8814 39.2344 74.3714 38.7699 74.7038 38.1733C75.0362 37.5682 75.2024 36.8651 75.2024 36.0639C75.2024 35.2543 75.0362 34.5554 74.7038 33.9673C74.3714 33.3707 73.8814 32.9105 73.2337 32.5866C72.5859 32.2628 71.7891 32.1009 70.843 32.1009H67.7237V53.1818H61.3956Z" fill="black"/>
-                    <path d="M91.2081 27V53.1818H84.88V27H91.2081Z" fill="black"/>
-                    </svg>     
-            </div>
             <!-- Your form fields for step 1 -->
             <form action="" class="form" id="form1" method="post">
-                <label for="email-address">Email-Adresse</label>
-                <input class="el" type="email" id="email-address">
-                <input class="el" type="password" id="password">
-                <input class="el" id="sign-in" type="submit" value="Anmelden">
+                <section id="logo1">
+                    <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="40" rx="50" ry="40" fill="#FAFF00"/>
+                        <path d="M15.8011 53.1818H9L17.8338 27H26.2585L35.0923 53.1818H28.2912L22.142 33.5966H21.9375L15.8011 53.1818ZM14.8935 42.8778H29.1094V47.6847H14.8935V42.8778Z" fill="black"/>
+                        <path d="M37.9112 53.1818V27H48.7266C50.6868 27 52.3786 27.3835 53.8018 28.1506C55.2337 28.9091 56.3374 29.9702 57.1129 31.3338C57.8885 32.6889 58.2763 34.2656 58.2763 36.0639C58.2763 37.8707 57.88 39.4517 57.0874 40.8068C56.3033 42.1534 55.1825 43.1974 53.7251 43.9389C52.2678 44.6804 50.5376 45.0511 48.5348 45.0511H41.8615V40.0653H47.3587C48.3132 40.0653 49.1101 39.8991 49.7493 39.5668C50.397 39.2344 50.8871 38.7699 51.2195 38.1733C51.5518 37.5682 51.718 36.8651 51.718 36.0639C51.718 35.2543 51.5518 34.5554 51.2195 33.9673C50.8871 33.3707 50.397 32.9105 49.7493 32.5866C49.1016 32.2628 48.3047 32.1009 47.3587 32.1009H44.2393V53.1818H37.9112Z" fill="black"/>
+                        <path d="M61.3956 53.1818V27H72.2109C74.1712 27 75.8629 27.3835 77.2862 28.1506C78.718 28.9091 79.8217 29.9702 80.5973 31.3338C81.3729 32.6889 81.7607 34.2656 81.7607 36.0639C81.7607 37.8707 81.3643 39.4517 80.5717 40.8068C79.7876 42.1534 78.6669 43.1974 77.2095 43.9389C75.7521 44.6804 74.022 45.0511 72.0192 45.0511H65.3459V40.0653H70.843C71.7976 40.0653 72.5945 39.8991 73.2337 39.5668C73.8814 39.2344 74.3714 38.7699 74.7038 38.1733C75.0362 37.5682 75.2024 36.8651 75.2024 36.0639C75.2024 35.2543 75.0362 34.5554 74.7038 33.9673C74.3714 33.3707 73.8814 32.9105 73.2337 32.5866C72.5859 32.2628 71.7891 32.1009 70.843 32.1009H67.7237V53.1818H61.3956Z" fill="black"/>
+                        <path d="M91.2081 27V53.1818H84.88V27H91.2081Z" fill="black"/>
+                        </svg>     
+                </section>
+                <section class="pairs">
+                    <label for="email-address">Email-Adresse</label>
+                    <input class="el" type="email" id="email-address" placeholder="ari@ario.ch">
+                    <input class="el" type="password" id="password" placeholder="*************">
+                    <input class="el" id="sign-in" type="submit" value="Anmelden">
+                </section>
                 <input class="el" id="gmail-sign-in" type="submit" value="Mit Gmail anmelden">
-                <p class="el">Oder</p>
-                <input class="el" type="button" value="registrieren" onclick="nextPage()">
+                <p class="el" id="or">Oder</p>
+                <input class="el" type="button" value="registrieren" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'" >
             </form>
         </section>
 
         <section class="signup-page" id="page2">
             <!-- Page 2 content -->
-            <form action="" class="form" id="form1" method="post">
-                <label for="email-address">Email-Adresse</label>
-                <input class="el" type="email" id="email-address">
-                <input class="el" type="password" id="password">
-                <input class="el" type="submit" value="Anmelden">
-                <br>
-                <input class="el" type="submit" value="Mit Gmail anmelden">
-                <p class="el">Oder registrieren</p>
-                <input class="el" type="button" value="registrieren" onclick="nextPage()">
+            <form action="" class="form" id="form2" method="post">
+                <section id="logo2">
+                    <svg width="50" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="40" rx="50" ry="40" fill="#FAFF00"/>
+                        <path d="M15.8011 53.1818H9L17.8338 27H26.2585L35.0923 53.1818H28.2912L22.142 33.5966H21.9375L15.8011 53.1818ZM14.8935 42.8778H29.1094V47.6847H14.8935V42.8778Z" fill="black"/>
+                        <path d="M37.9112 53.1818V27H48.7266C50.6868 27 52.3786 27.3835 53.8018 28.1506C55.2337 28.9091 56.3374 29.9702 57.1129 31.3338C57.8885 32.6889 58.2763 34.2656 58.2763 36.0639C58.2763 37.8707 57.88 39.4517 57.0874 40.8068C56.3033 42.1534 55.1825 43.1974 53.7251 43.9389C52.2678 44.6804 50.5376 45.0511 48.5348 45.0511H41.8615V40.0653H47.3587C48.3132 40.0653 49.1101 39.8991 49.7493 39.5668C50.397 39.2344 50.8871 38.7699 51.2195 38.1733C51.5518 37.5682 51.718 36.8651 51.718 36.0639C51.718 35.2543 51.5518 34.5554 51.2195 33.9673C50.8871 33.3707 50.397 32.9105 49.7493 32.5866C49.1016 32.2628 48.3047 32.1009 47.3587 32.1009H44.2393V53.1818H37.9112Z" fill="black"/>
+                        <path d="M61.3956 53.1818V27H72.2109C74.1712 27 75.8629 27.3835 77.2862 28.1506C78.718 28.9091 79.8217 29.9702 80.5973 31.3338C81.3729 32.6889 81.7607 34.2656 81.7607 36.0639C81.7607 37.8707 81.3643 39.4517 80.5717 40.8068C79.7876 42.1534 78.6669 43.1974 77.2095 43.9389C75.7521 44.6804 74.022 45.0511 72.0192 45.0511H65.3459V40.0653H70.843C71.7976 40.0653 72.5945 39.8991 73.2337 39.5668C73.8814 39.2344 74.3714 38.7699 74.7038 38.1733C75.0362 37.5682 75.2024 36.8651 75.2024 36.0639C75.2024 35.2543 75.0362 34.5554 74.7038 33.9673C74.3714 33.3707 73.8814 32.9105 73.2337 32.5866C72.5859 32.2628 71.7891 32.1009 70.843 32.1009H67.7237V53.1818H61.3956Z" fill="black"/>
+                        <path d="M91.2081 27V53.1818H84.88V27H91.2081Z" fill="black"/>
+                        </svg>     
+                </section>
+                <section class="pairs">
+                    <label for="gender">Anrede:</label>
+                    <select name="gender" id="gender">
+                        <option value="Herr">Herr</option>
+                        <option value="Frau">Frau</option>
+                    </select>
+                </section>
+                <section class="pairs">
+                    <label for="first-name">Vorname:</label>
+                    <input class="el" type="email" id="first-name" placeholder="ari">
+                </section>
+                <section class="pairs">
+                    <label for="last-name">Nachname:</label>
+                    <input class="el" type="email" id="last-name" placeholder="ario">
+                </section>
+                <section class="pairs">
+                    <label for="email-address">Email-Adresse</label>
+                    <input class="el" type="email" id="email-address" placeholder="ari@ario.ch">
+                </section>
+                <section class="pairs">
+                    <label for="birthday">birthday:</label>
+                    <input class="el" type="date" id="birthday">
+                </section>
+                <section class="pairs">
+                    <label for="street">Strasse:</label>
+                    <input class="el" type="text" id="street" placeholder="Sonneggstrasse 11">
+                </section>
+                <input class="el" type="button" value="weiter" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
             </form>
-            <button onclick="prevPage()">Previous</button>
-            <button onclick="nextPage()">Next</button>
         </section>
-
+        
         <section class="signup-page" id="page3">
             <!-- Page 3 content -->
-            <h2>Step 3: Confirmation</h2>
             <!-- Your form fields for step 3 -->
-            <button onclick="prevPage()">Previous</button>
-            <button onclick="nextPage()">Next</button>
+            <form action="" class="form" id="form3" method="post">
+                <section id="logo2">
+                    <svg width="50" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="40" rx="50" ry="40" fill="#FAFF00"/>
+                        <path d="M15.8011 53.1818H9L17.8338 27H26.2585L35.0923 53.1818H28.2912L22.142 33.5966H21.9375L15.8011 53.1818ZM14.8935 42.8778H29.1094V47.6847H14.8935V42.8778Z" fill="black"/>
+                        <path d="M37.9112 53.1818V27H48.7266C50.6868 27 52.3786 27.3835 53.8018 28.1506C55.2337 28.9091 56.3374 29.9702 57.1129 31.3338C57.8885 32.6889 58.2763 34.2656 58.2763 36.0639C58.2763 37.8707 57.88 39.4517 57.0874 40.8068C56.3033 42.1534 55.1825 43.1974 53.7251 43.9389C52.2678 44.6804 50.5376 45.0511 48.5348 45.0511H41.8615V40.0653H47.3587C48.3132 40.0653 49.1101 39.8991 49.7493 39.5668C50.397 39.2344 50.8871 38.7699 51.2195 38.1733C51.5518 37.5682 51.718 36.8651 51.718 36.0639C51.718 35.2543 51.5518 34.5554 51.2195 33.9673C50.8871 33.3707 50.397 32.9105 49.7493 32.5866C49.1016 32.2628 48.3047 32.1009 47.3587 32.1009H44.2393V53.1818H37.9112Z" fill="black"/>
+                        <path d="M61.3956 53.1818V27H72.2109C74.1712 27 75.8629 27.3835 77.2862 28.1506C78.718 28.9091 79.8217 29.9702 80.5973 31.3338C81.3729 32.6889 81.7607 34.2656 81.7607 36.0639C81.7607 37.8707 81.3643 39.4517 80.5717 40.8068C79.7876 42.1534 78.6669 43.1974 77.2095 43.9389C75.7521 44.6804 74.022 45.0511 72.0192 45.0511H65.3459V40.0653H70.843C71.7976 40.0653 72.5945 39.8991 73.2337 39.5668C73.8814 39.2344 74.3714 38.7699 74.7038 38.1733C75.0362 37.5682 75.2024 36.8651 75.2024 36.0639C75.2024 35.2543 75.0362 34.5554 74.7038 33.9673C74.3714 33.3707 73.8814 32.9105 73.2337 32.5866C72.5859 32.2628 71.7891 32.1009 70.843 32.1009H67.7237V53.1818H61.3956Z" fill="black"/>
+                        <path d="M91.2081 27V53.1818H84.88V27H91.2081Z" fill="black"/>
+                        </svg>     
+                </section>
+                <section class="pairs" id="address">
+                        <label for="plz">PLZ:</label>
+                        <input class="el" type="text" id="plz" placeholder="8004">
+                </section>
+                <section class="pairs" id="address">
+                        <label for="ort">Ort:</label>
+                        <input class="el" type="text" id="ort" placeholder="Zürich">
+                </section>
+                <section class="pairs">
+                    <label for="tel-g">Telefon G:</label>
+                    <input class="el" type="tel" id="tel-g" placeholder="ari@ario.ch">
+                </section>
+                <section class="pairs">
+                    <label for="tel-p">Telefon P:</label>
+                    <input class="el" type="tel" id="tel-p" placeholder="ari@ario.ch">
+                </section>
+                <section class="pairs" id="agb-news">
+                    <section class="agb-news">
+                        <label for="agb">AGB:</label>
+                        <input class="el" type="radio" id="agb" placeholder="8004">
+                    </section>
+                    <section class="agb-news">
+                        <label for="newsletter">Newsletter:</label>
+                        <input class="el" type="text" id="newsletter" placeholder="">
+                    </section>
+                </section>
+                <section class="pairs">
+                    <label for="remark">Bemerkung:</label>
+                    <input class="el" type="text" id="remark" placeholder="bla pla tla">
+                </section>
+                <input class="el" type="button" value="überprüfen" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+            </form>
         </section>
 
 
@@ -68,25 +136,43 @@
             <!-- Page 4 content -->
             <h2>Step 4: </h2>
             <!-- Your form fields for step 4 -->
-            <button onclick="prevPage()">Previous</button>
-            <button onclick="nextPage()">Next</button>
+            <form action="" class="form" id="form3" method="post">
+                <section id="logo2">
+                    <svg width="50" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="40" rx="50" ry="40" fill="#FAFF00"/>
+                        <path d="M15.8011 53.1818H9L17.8338 27H26.2585L35.0923 53.1818H28.2912L22.142 33.5966H21.9375L15.8011 53.1818ZM14.8935 42.8778H29.1094V47.6847H14.8935V42.8778Z" fill="black"/>
+                        <path d="M37.9112 53.1818V27H48.7266C50.6868 27 52.3786 27.3835 53.8018 28.1506C55.2337 28.9091 56.3374 29.9702 57.1129 31.3338C57.8885 32.6889 58.2763 34.2656 58.2763 36.0639C58.2763 37.8707 57.88 39.4517 57.0874 40.8068C56.3033 42.1534 55.1825 43.1974 53.7251 43.9389C52.2678 44.6804 50.5376 45.0511 48.5348 45.0511H41.8615V40.0653H47.3587C48.3132 40.0653 49.1101 39.8991 49.7493 39.5668C50.397 39.2344 50.8871 38.7699 51.2195 38.1733C51.5518 37.5682 51.718 36.8651 51.718 36.0639C51.718 35.2543 51.5518 34.5554 51.2195 33.9673C50.8871 33.3707 50.397 32.9105 49.7493 32.5866C49.1016 32.2628 48.3047 32.1009 47.3587 32.1009H44.2393V53.1818H37.9112Z" fill="black"/>
+                        <path d="M61.3956 53.1818V27H72.2109C74.1712 27 75.8629 27.3835 77.2862 28.1506C78.718 28.9091 79.8217 29.9702 80.5973 31.3338C81.3729 32.6889 81.7607 34.2656 81.7607 36.0639C81.7607 37.8707 81.3643 39.4517 80.5717 40.8068C79.7876 42.1534 78.6669 43.1974 77.2095 43.9389C75.7521 44.6804 74.022 45.0511 72.0192 45.0511H65.3459V40.0653H70.843C71.7976 40.0653 72.5945 39.8991 73.2337 39.5668C73.8814 39.2344 74.3714 38.7699 74.7038 38.1733C75.0362 37.5682 75.2024 36.8651 75.2024 36.0639C75.2024 35.2543 75.0362 34.5554 74.7038 33.9673C74.3714 33.3707 73.8814 32.9105 73.2337 32.5866C72.5859 32.2628 71.7891 32.1009 70.843 32.1009H67.7237V53.1818H61.3956Z" fill="black"/>
+                        <path d="M91.2081 27V53.1818H84.88V27H91.2081Z" fill="black"/>
+                        </svg>     
+                </section>
+                <section class="pairs" id="address">
+                    <p class="info">1</p>
+                    <p class="info">2</p>
+                    <p class="info">3</p>
+                    <p class="info">4</p>
+                    <p class="info">5</p>
+                    <p class="info">6</p>
+                    <p class="info">7</p>
+                    <p class="info">8</p>
+                    <p class="info">9</p>
+                    <p class="info">0</p>
+                    <p class="info">11</p>
+                    <p class="info">12</p>
+                    <p class="info">13</p>
+                </section>
+
+                <input class="el" id="back" type="button" value="zurück" onclick="secondPage()" onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='#EEE'">
+                <input class="el" type="button" value="submit" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+            </form>
         </section>
 
         <section class="signup-page" id="page5">
             <!-- Page 5 content -->
-            <h2>Step 5: </h2>
+            <h2>Dein Form wurde Erfolgreich eingereicht </h2>
             <!-- Your form fields for step 5 -->
-            <button onclick="prevPage()">Previous</button>
-            <button onclick="previewForm()">Preview</button>
         </section>
         
-        <section class="signup-page" id="page6">
-            <!-- Page 6 content -->
-            <h2>Step 6: </h2>
-            <!-- Your form fields for step 6 -->
-            <button onclick="startPage()">Review</button>
-            <button onclick="submitForm()">Submit</button>
-        </section>
     </main>
     <script src="script.js"></script>
 </body>
