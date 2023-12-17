@@ -38,6 +38,7 @@ body {
     min-height: 80vh;
     border-radius: 20px;
     background-color: var(--dark);
+    box-shadow: 2px 4px 10px var(--darkest);
 }
 
 .signup-page {

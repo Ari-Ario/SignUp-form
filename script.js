@@ -1,5 +1,10 @@
 let currentPage = 1;
 function nextPage() {
+    if (currentPage >= 5) {
+        currentPage = 1
+    } else if (currentPage<= 0){
+        currentPage= 1
+    }
     const mainPage = document.getElementById("all-pages");
     mainPage.style.minWidth = "400px";
     const allPages = document.getElementById(`page${currentPage}`);
@@ -116,7 +121,7 @@ function changeToEnglish(lang){
 
         back.value= "Back"
         send.value= "Send"
-        
+
         informationSent.innerHTML= "Your information was sent successfully."
     } else if (lang.value === "de") {
         location.reload();
