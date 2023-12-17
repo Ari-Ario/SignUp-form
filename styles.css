@@ -110,6 +110,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-start: auto;
+    padding: 0;
+    margin: 0;
+    max-height: 30px;
+    /* place-self: center center;
+    justify-self: center;
+    align-self: self-start; */
 }
 
 .el:hover {
@@ -141,13 +147,12 @@ body {
         flex-direction: column;
         justify-content: space-around;
     }
+    #form3 {
+        padding: 0 20px 0 20px;
+    }
 
     .pairs {
         margin: 10px 0 10px 0;
-    }
-
-    #address {
-        grid-template-columns: 1fr;
     }
 
     .el {
@@ -155,5 +160,18 @@ body {
         width: 100%;
         min-width: 300px;
         min-height: 30px;
+    }
+    .agb, .news {
+        padding: 0;
+        margin: 0;
+        max-height: 30px;
+        /* place-self: center center;
+        justify-self: center;
+        align-self: self-start; */
+    }
+    #agb, #newsletter {
+        max-height: 50%;
+        padding: 0;
+        margin: 0;
     }
   }
