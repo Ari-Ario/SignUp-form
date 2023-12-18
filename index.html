@@ -20,9 +20,9 @@
             <!-- Page 1 content -->
             <!-- form fields for step 1 -->
             <form action="" class="form" id="form1" method="post">
-                <section id="language">
-                    <select name="language" id="language" onchange="changeToEnglish(this)">
-                        <option value="de">Deutsch</option>
+                <section id="language" class="pairs">
+                    <select name="language" class="#" id="lang-selection" onchange="changeLanguage(this)">
+                        <option value="de" default>Deutsch</option>
                         <option value="en">English</option>
                     </select>
                 </section>
@@ -36,14 +36,16 @@
                         </svg>     
                 </section>
                 <section class="pairs">
-                    <label for="email-address" id="email">Email-Adresse</label>
+                    <label for="email-address" class="pairs" id="email">Email-Adresse</label>
                     <input class="el" type="email" id="email-address" placeholder="ari@ario.ch">
                     <input class="el" type="password" id="password" placeholder="*************">
                     <input class="el" id="sign-in" type="submit" value="Anmelden">
                 </section>
-                <input class="el" id="gmail-sign-in" type="submit" value="Mit Gmail anmelden">
-                <p class="el" id="or">Oder</p>
-                <input class="el" id="sign-up" type="button" value="registrieren" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'" >
+                <section class="pairs">
+                    <input class="el pairs" id="gmail-sign-in" type="submit" value="Mit Gmail anmelden">
+                    <p class="el" id="or">Oder</p>
+                    <input class="el pairs" id="sign-up" type="button" value="registrieren" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'" >
+                </section>
             </form>
         </section>
 
@@ -69,25 +71,27 @@
                 </section>
                 <section class="pairs">
                     <label for="first-name" id="first-name-label">Vorname:</label>
-                    <input class="el" type="email" id="first-name" placeholder="ari">
+                    <input class="el" type="email" id="first-name-input" placeholder="ari">
                 </section>
                 <section class="pairs">
                     <label for="last-name" id="last-name-label">Nachname:</label>
-                    <input class="el" type="email" id="last-name" placeholder="ario">
+                    <input class="el" type="email" id="last-name-input" placeholder="ario">
                 </section>
                 <section class="pairs">
                     <label for="email-address" id="email-address-page2">Email-Adresse</label>
-                    <input class="el" type="email" id="email-address" placeholder="ari@ario.ch">
+                    <input class="el" type="email" id="email-address-input" placeholder="ari@ario.ch">
                 </section>
                 <section class="pairs">
                     <label for="birthday" id="birthday-label">Geburtsdatum:</label>
-                    <input class="el" type="date" id="birthday">
+                    <input class="el" type="date" id="birthday-input">
                 </section>
                 <section class="pairs">
                     <label for="street" id="street-label">Strasse:</label>
-                    <input class="el" type="text" id="street" placeholder="Sonneggstrasse 11">
+                    <input class="el" type="text" id="street-input" placeholder="Sonneggstrasse 11">
                 </section>
+                <section class="pairs">
                 <input class="el" id="next-page" type="button" value="weiter" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                </section>
             </form>
         </section>
         
@@ -106,33 +110,35 @@
                 </section>
                 <section class="pairs" id="address">
                         <label for="plz" id="plz">PLZ:</label>
-                        <input class="el" type="text" id="plz" placeholder="8004">
+                        <input class="el" type="text" id="plz-input" placeholder="8004">
                 </section>
                 <section class="pairs" id="address">
                         <label for="ort" id="place">Ort:</label>
-                        <input class="el" type="text" id="ort" placeholder="Zürich">
+                        <input class="el" type="text" id="ort-input" placeholder="Zürich">
                 </section>
                 <section class="pairs">
                     <label for="tel-g" id="tel-g">Telefon G:</label>
-                    <input class="el" type="tel" id="tel-g" placeholder="ari@ario.ch">
+                    <input class="el" type="tel" id="tel-g-input" placeholder="088 888 44 44">
                 </section>
                 <section class="pairs">
                     <label for="tel-p" id="tel-p">Telefon P:</label>
-                    <input class="el" type="tel" id="tel-p" placeholder="ari@ario.ch">
+                    <input class="el" type="tel" id="tel-p-input" placeholder="076 216 11 11">
                 </section>
                 <section class="agb">
                     <label for="agb">AGB:</label>
-                    <input class="el" type="radio" id="agb">
+                    <input class="el" type="radio" id="agb-input">
                 </section>
                 <section class="news">
                     <label for="newsletter" id="newsletter">Newsletter:</label>
-                    <input class="el" type="checkbox" id="newsletter">
+                    <input class="el" type="checkbox" id="newsletter-input">
                 </section>
                 <section class="pairs">
                     <label for="remark" id="remark">Bemerkung:</label>
                     <input class="el" type="text" id="remark" placeholder="bla pla tla">
                 </section>
-                <input class="el" id="check" type="button" value="überprüfen" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                <section class="pairs">
+                <input class="el" id="check" type="button" value="überprüfen" onclick="storeValues()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                </section>
             </form>
         </section>
 
@@ -150,10 +156,14 @@
                         </svg>     
                 </section>
                 <section class="pairs" id="info">
-                        <p>first name and last name and other information filled in the form.</p>
+                        <p id="info-output"></p>
                 </section>
-                <input class="el" id="back" type="button" value="zurück" onclick="secondPage()" onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='#EEE'">
-                <input class="el" id="send" type="button" value="Absenden" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                <section class="pairs">
+                    <input class="el" id="back" type="button" value="zurück" onclick="secondPage()" onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='#EEE'">
+                </section>
+                <section class="pairs">
+                    <input class="el" id="send" type="button" value="Absenden" onclick="confirmationPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                </section>
             </form>
         </section>
 
@@ -170,7 +180,7 @@
                         </svg>     
                 </section>
                 <section class="pairs" id="info">
-                        <p id="information-sent">Dein Form wurde Erfolgreich eingereicht.</p>
+                        <p id="information-sent"></p>
                 </section>
             </form>
         </section>

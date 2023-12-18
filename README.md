@@ -10,5 +10,7 @@ page 5: submission colmpletion
 
 ## Functionality:
 It takes data, stores it, and finally gives it back:
+sessionStorage()
+
 
 

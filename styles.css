@@ -60,18 +60,19 @@ body {
     display: block;
     text-align: left;
     padding: 30px;
-    margin: 0;
+    top: 0;
     height: 100%;
-    width: 100%;
     box-sizing: border-box;
     float: left;
     clear: both;
 }
+#form4 {
+    text-align: center;
+}
 
 #language {
     text-align: end;
-    margin: 0;
-    padding: 0;
+    top: 0;
 }
 
 #logo1{
@@ -83,11 +84,11 @@ body {
 }
 
 .pairs {
-    margin: 10px 0 10px 0;
+    margin-top: 2vw;
 }
 
 .el {
-    margin-top: 2vw;
+    margin-top: 1vw;
     width: 100%;
     padding: 5px 0 5px 0;
     border-radius: 10px;
@@ -101,6 +102,7 @@ body {
     background-color: var(--darklight);
     color: white;
 }
+
 #gmail-sign-in {
     background-color: #db4a39;
     color: white;
@@ -121,7 +123,9 @@ body {
 .el:hover {
 	opacity: 0.8;
 }
-
+input.not-filled {
+    background-color: red;
+}
 
  @media screen and (max-width: 768px) {
 
