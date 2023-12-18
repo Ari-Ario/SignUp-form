@@ -1,25 +1,32 @@
 let currentPage = 1;
 selectedLanguage = "de";
+
 function nextPage() {
     if (currentPage >= 5) {
         currentPage = 1
     } else if (currentPage<= 0){
         currentPage= 1
     }
-    const mainPage = document.getElementById("all-pages");
+    const mainPage = document.getElementById("main-page");
     mainPage.style.minWidth = "400px";
-    const allPages = document.getElementById(`page${currentPage}`);
-    allPages.style.display = "none";
+    const previousPage = document.getElementById(`page${currentPage}`);
+    previousPage.style.display = "none";
     currentPage++;
     const newPage = document.getElementById(`page${currentPage}`)
+    const newForm = document.getElementById(`page${currentPage}`)
     newPage.style.display = "block";
     newPage.style.textAlign = "center";
+    newForm.style.width = "100%";
     // newPage.style.padding= "0";
 }
 
-function secondPage(){
-    currentPage = 2;
-    const allPages = document.getElementById(`page4`);
+function backPage(pagenumber){
+    if (pagenumber == 4){
+        currentPage = 2;
+    } else if (pagenumber === 5){
+        currentPage = 1;
+    }
+    const allPages = document.getElementById(`page${pagenumber}`);
     allPages.style.display = "none";
     const newPage = document.getElementById(`page${currentPage}`)
     newPage.style.display = "block";
@@ -33,17 +40,6 @@ function prevPage() {
         // updatePage();
     }
 }
-
-function previewForm() {
-    const allPages = document.getElementById(`page${currentPage}`);
-    allPages.style.display = "none";
-    currentPage++;
-    const newPage = document.getElementById(`page${currentPage}`)
-    newPage.style.display = "block";
-    newPage.style.textAlign = "center"
-    newPage.style.backgroundColor= "brown"
-}
-
 
 // to call the functions with buttons (second method)
 
@@ -145,7 +141,7 @@ function storeValues(){
     const ortInput = document.getElementById("ort-input").value;
     const telGInput = document.getElementById("tel-g-input").value;
     const telPInput = document.getElementById("tel-p-input").value;
-    const agbInput = document.getElementById("agb-input").value;
+    const agbInput = document.getElementById("agb-input");
     const newsletterInput = document.getElementById("newsletter-input").value;
 
     // in case an empty input 
@@ -175,7 +171,7 @@ function storeValues(){
     sessionStorage.setItem("Place", ortInput);
     sessionStorage.setItem("Telephone-number", telGInput);
     sessionStorage.setItem("Cellphone-number", telPInput);
-    sessionStorage.setItem("AGB-confirmation", agbInput);
+    sessionStorage.setItem("AGB-confirmation", agbInput.checked);
     sessionStorage.setItem("Newsletter-confirmation", newsletterInput);
 
     nextPage()
@@ -185,7 +181,7 @@ function storeValues(){
 function previewItems(){
     // document.getElementById("all-pages").reset()
     const infoOutput = document.getElementById("info-output");
-    const language= document.getElementById("language");
+    const language= document.getElementById("lang-selection");
     const selectedLanguage = language.value;
 
     const dear = sessionStorage.getItem("Dear");
@@ -213,14 +209,14 @@ function previewItems(){
 
 function confirmationPage() {
     const confirmedInfo = document.getElementById("information-sent");
-    const language= document.getElementById("language");
+    const language= document.getElementById("lang-selection");
     const selectedLanguage = language.value;    
     
     if (selectedLanguage == "de") {
-        confirmedInfo.innerHTML = `Deine Informationen sind bei uns!`
+        confirmedInfo.innerHTML = `Ihre Informationen sind bei uns eingetroffen!`
     } else if (selectedLanguage == "en") {
-        confirmedInfo.innerHTML = `Your Information has been sent successfully.`
+        confirmedInfo.innerHTML = `We have recieved your Information successfully!`
     } 
-
     nextPage()
+    setInterval(function(){backPage(5)}, 5000)
 }
