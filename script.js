@@ -26,8 +26,8 @@ function backPage(pagenumber){
     } else if (pagenumber === 5){
         currentPage = 1;
     }
-    const allPages = document.getElementById(`page${pagenumber}`);
-    allPages.style.display = "none";
+    const displayPage = document.getElementById(`page${pagenumber}`);
+    displayPage.style.display = "none";
     const newPage = document.getElementById(`page${currentPage}`)
     newPage.style.display = "block";
     newPage.style.textAlign = "center";
@@ -101,6 +101,8 @@ function changeLanguage(lang){
         dear.innerHTML = "Dear"
         mr.innerHTML= "Mr"
         mrs.innerHTML= "Mrs/Miss"
+        mr.value= "Mr"
+        mrs.value= "Mrs/Miss"
         firstNameLabel.innerHTML= "First name"
         lastNameLabel.innerHTML= "Last name"
         emailPage2.innerHTML= "Email address"
@@ -117,7 +119,7 @@ function changeLanguage(lang){
         remark.innerHTML= "Remark"
         check.value= "Check"
 
-        back.value= "Back"
+        back.value= "Review"
         send.value= "Send"
 
         informationSent.innerHTML= "Your information was sent successfully."
@@ -142,23 +144,23 @@ function storeValues(){
     const telGInput = document.getElementById("tel-g-input").value;
     const telPInput = document.getElementById("tel-p-input").value;
     const agbInput = document.getElementById("agb-input");
-    const newsletterInput = document.getElementById("newsletter-input").value;
+    const newsletterInput = document.getElementById("newsletter-input");
 
-    // in case an empty input 
-/*     if (agbInput.value.trim === ""){
+    // in case of an empty input 
+/*     if (agbInput.value.trim() === ""){
         agbInput.classList.add("not-filled")
-    } else if (!telGInput){
+    } else if (telGInput.value.trim() === ""){
         telGInput.classList.add("not-filled");
-    } else if (!ortInput){
-        ortInput.style.backgroundColor= "red";
-    } else if (!plzInput){
-        plzInput.style.color= "red";
-    } else if (!emailAddressInput){
-        emailAddressInput.style.color= "red";
-    } else if (!lastNameInput){
-        lastNameInput.style.color= "red";
-    } else if (!firstNameInput){
-        firstNameInput.style.color= "red";
+    } else if (ortInput.value.trim() === ""){
+        ortInput.classList.add("not-filled")
+    } else if (plzInput.value.trim() === ""){
+        plzInput.classList.add("not-filled")
+    } else if (emailAddressInput.value.trim() === ""){
+        emailAddressInput.classList.add("not-filled")
+    } else if (lastNameInput.value.trim() === ""){
+        lastNameInput.classList.add("not-filled")
+    } else if (firstNameInput.value.trim() === ""){
+        firstNameInput.classList.add("not-filled")
     }  */
 
     sessionStorage.setItem("Dear", dearInput);
@@ -172,7 +174,7 @@ function storeValues(){
     sessionStorage.setItem("Telephone-number", telGInput);
     sessionStorage.setItem("Cellphone-number", telPInput);
     sessionStorage.setItem("AGB-confirmation", agbInput.checked);
-    sessionStorage.setItem("Newsletter-confirmation", newsletterInput);
+    sessionStorage.setItem("Newsletter-confirmation", newsletterInput.checked);
 
     nextPage()
     previewItems()
@@ -199,15 +201,15 @@ function previewItems(){
 
     if (selectedLanguage == "de") {
         infoOutput.innerHTML = `Angaben:<br>  Anrede: ${dear}<br> Vorname: ${fName}<br> Nachname: ${lName}<br> Email Adresse: ${mail}<br> Gebrtsdatum: ${born}<br> 
-        Adresse: ${street}, ${postalcode}, ${place}<br> Telefonnummer: ${tel}<br> Handynummer:${cellPhone}<br> AGB Zustimmung: ${agb}<br>`
+        Adresse: ${street}, ${postalcode}, ${place}<br> Telefonnummer: ${tel}<br> Handynummer:${cellPhone}<br> AGB Zustimmung: ${agb}<br> Newsletter Zustimmung: ${newsletter}<br>`
     } else if (selectedLanguage == "en") {
         infoOutput.innerHTML = `Informations:<br>  Gender: ${dear}<br> first name: ${fName}<br> last name: ${lName}<br> Email-address: ${mail}<br> Birthday: ${born}<br> 
-        Address: ${street}, ${postalcode}, ${place}<br> Phone number: ${tel}<br> Cellphone number: ${cellPhone}<br> AGB-confirmation: ${agb}<br>`
+        Address: ${street}, ${postalcode}, ${place}<br> Phone number: ${tel}<br> Cellphone number: ${cellPhone}<br> AGB-confirmation: ${agb}<br> Newsletter-confirmation: ${newsletter}<br>`
     }
 
 }
 
-function confirmationPage() {
+function confirmationPage(sth) {
     const confirmedInfo = document.getElementById("information-sent");
     const language= document.getElementById("lang-selection");
     const selectedLanguage = language.value;    
@@ -216,7 +218,12 @@ function confirmationPage() {
         confirmedInfo.innerHTML = `Ihre Informationen sind bei uns eingetroffen!`
     } else if (selectedLanguage == "en") {
         confirmedInfo.innerHTML = `We have recieved your Information successfully!`
-    } 
-    nextPage()
-    setInterval(function(){backPage(5)}, 5000)
+    }
+    if (!sth){
+        return;
+    } else {
+        nextPage();
+        setTimeout(function(){backPage(5)}, 5000);
+    }
+
 }

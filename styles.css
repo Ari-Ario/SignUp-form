@@ -124,8 +124,8 @@ body {
 	opacity: 0.8;
 }
 input.not-filled {
-    background-color: red;
-}
+    background-color: #ffcccc; /* Light red */
+  }
 
  @media screen and (max-width: 768px) {
 
