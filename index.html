@@ -36,12 +36,12 @@
                     <label for="email-address" class="pairs" id="email">Email-Adresse</label>
                     <input class="el" type="email" id="email-address" placeholder="ari@ario.ch">
                     <input class="el" type="password" id="password" placeholder="*************">
-                    <input class="el" id="sign-in" type="submit" value="Anmelden">
+                    <input class="el" type="submit" id="sign-in" value="Anmelden">
                 </section>
                 <section class="pairs">
-                    <input class="el pairs" id="gmail-sign-in" type="submit" value="Mit Gmail anmelden">
+                    <input class="el pairs" type="submit" id="gmail-sign-in" value="Mit Gmail anmelden">
                     <p class="el" id="or">Oder</p>
-                    <input class="el pairs" id="sign-up" type="button" value="registrieren" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'" >
+                    <input class="el pairs" type="button" id="sign-up" value="registrieren" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'" >
                 </section>
             </form>
         </section>
@@ -68,19 +68,19 @@
                 </section>
                 <section class="pairs">
                     <label for="first-name" id="first-name-label">Vorname:</label>
-                    <input class="el" type="email" id="first-name-input" placeholder="ari">
+                    <input class="el needs-validation" type="text" id="first-name-input" placeholder="ari">
                 </section>
                 <section class="pairs">
                     <label for="last-name" id="last-name-label">Nachname:</label>
-                    <input class="el" type="email" id="last-name-input" placeholder="ario">
+                    <input class="el needs-validation" type="text" id="last-name-input" placeholder="ario">
                 </section>
                 <section class="pairs">
                     <label for="email-address" id="email-address-page2">Email-Adresse</label>
-                    <input class="el" type="email" id="email-address-input" placeholder="ari@ario.ch">
+                    <input class="el needs-validation" type="email" id="email-address-input" placeholder="ari@ario.ch">
                 </section>
                 <section class="pairs">
                     <label for="birthday" id="birthday-label">Geburtsdatum:</label>
-                    <input class="el" type="date" id="birthday-input">
+                    <input class="el needs-validation" type="date" id="birthday-input">
                 </section>
                 <section class="pairs">
                     <label for="street" id="street-label">Strasse:</label>
@@ -107,7 +107,7 @@
                 </section>
                 <section class="pairs" id="address">
                         <label for="plz" id="plz">PLZ:</label>
-                        <input class="el" type="text" id="plz-input" placeholder="8004">
+                        <input class="el" type="number" id="plz-input" placeholder="8004">
                 </section>
                 <section class="pairs" id="address">
                         <label for="ort" id="place">Ort:</label>

@@ -2,22 +2,23 @@ let currentPage = 1;
 selectedLanguage = "de";
 
 function nextPage() {
-    if (currentPage >= 5) {
-        currentPage = 1
-    } else if (currentPage<= 0){
+    if (currentPage<= 0){
         currentPage= 1
+    }else if (currentPage >= 5) {
+        currentPage = 1
+    } else if (currentPage === 2 || currentPage === 3) {
+        checkValidation();
     }
     const mainPage = document.getElementById("main-page");
     mainPage.style.minWidth = "400px";
     const previousPage = document.getElementById(`page${currentPage}`);
     previousPage.style.display = "none";
     currentPage++;
-    const newPage = document.getElementById(`page${currentPage}`)
-    const newForm = document.getElementById(`page${currentPage}`)
+    const newPage = document.getElementById(`page${currentPage}`);
+    const newForm = document.getElementById(`form${currentPage}`);
     newPage.style.display = "block";
     newPage.style.textAlign = "center";
     newForm.style.width = "100%";
-    // newPage.style.padding= "0";
 }
 
 function backPage(pagenumber){
@@ -41,15 +42,6 @@ function prevPage() {
     }
 }
 
-// to call the functions with buttons (second method)
-
-// function btnMouseOut(btn) {
-//     btn.style.backgroundColor ="blue"
-// }
-
-// function btnMouseOut(btn) {
-//     btn.style.backgroundColor ="#FFF"
-// }
 
 function changeLanguage(lang){
 /*     const language= document.getElementById("language");
@@ -132,46 +124,31 @@ function storeValues(){
     event.preventDefault()
     // elements of second page
     const dearInput = document.getElementById("gender").value;
-    const firstNameInput = document.getElementById("first-name-input").value;
-    const lastNameInput = document.getElementById("last-name-input").value;
-    const emailAddressInput = document.getElementById("email-address-input").value;
+    const firstNameInput = document.getElementById("first-name-input");
+    const lastNameInput = document.getElementById("last-name-input");
+    const emailAddressInput = document.getElementById("email-address-input");
     const birthdayInput = document.getElementById("birthday-input").value;
     const streetInput = document.getElementById("street-input").value;
     
     // elements of third page
     const plzInput = document.getElementById("plz-input").value;
     const ortInput = document.getElementById("ort-input").value;
-    const telGInput = document.getElementById("tel-g-input").value;
+    const telGInput = document.getElementById("tel-g-input");
     const telPInput = document.getElementById("tel-p-input").value;
     const agbInput = document.getElementById("agb-input");
     const newsletterInput = document.getElementById("newsletter-input");
 
-    // in case of an empty input 
-/*     if (agbInput.value.trim() === ""){
-        agbInput.classList.add("not-filled")
-    } else if (telGInput.value.trim() === ""){
-        telGInput.classList.add("not-filled");
-    } else if (ortInput.value.trim() === ""){
-        ortInput.classList.add("not-filled")
-    } else if (plzInput.value.trim() === ""){
-        plzInput.classList.add("not-filled")
-    } else if (emailAddressInput.value.trim() === ""){
-        emailAddressInput.classList.add("not-filled")
-    } else if (lastNameInput.value.trim() === ""){
-        lastNameInput.classList.add("not-filled")
-    } else if (firstNameInput.value.trim() === ""){
-        firstNameInput.classList.add("not-filled")
-    }  */
 
+    // declaring and storing the items:
     sessionStorage.setItem("Dear", dearInput);
-    sessionStorage.setItem("First-name", firstNameInput);
-    sessionStorage.setItem("Last-name", lastNameInput);
-    sessionStorage.setItem("Email-address", emailAddressInput);
+    sessionStorage.setItem("First-name", firstNameInput.value);
+    sessionStorage.setItem("Last-name", lastNameInput.value);
+    sessionStorage.setItem("Email-address", emailAddressInput.value);
     sessionStorage.setItem("Born-at", birthdayInput);
     sessionStorage.setItem("Street", streetInput);
     sessionStorage.setItem("Postalcode", plzInput);
     sessionStorage.setItem("Place", ortInput);
-    sessionStorage.setItem("Telephone-number", telGInput);
+    sessionStorage.setItem("Telephone-number", telGInput.value);
     sessionStorage.setItem("Cellphone-number", telPInput);
     sessionStorage.setItem("AGB-confirmation", agbInput.checked);
     sessionStorage.setItem("Newsletter-confirmation", newsletterInput.checked);
@@ -225,5 +202,14 @@ function confirmationPage(sth) {
         nextPage();
         setTimeout(function(){backPage(5)}, 5000);
     }
+}
 
+function checkValidation(){
+    const requiredElements = document.querySelector(".needs-validation")
+    const arr= Array.prototype.slice.call(requiredElements)
+    arr.forEach(function (element) {
+        if (element.value === "") {
+            console.log("i am inside")
+        }
+      });
 }
