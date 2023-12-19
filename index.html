@@ -13,6 +13,7 @@
             </svg>            
     </title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
     <main class="signup-container" id="main-page">
@@ -49,7 +50,7 @@
         <section class="signup-page" id="page2">
             <!-- Page 2 content -->
             <!-- form fields for step 2 -->
-            <form action="" class="form" id="form2" method="post">
+            <form name="second-form" action="" class="form" id="form2" method="post" onsubmit="validateSecondForm()">
                 <section id="logo2">
                     <svg width="40" height="32" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="50" cy="40" rx="50" ry="40" fill="#EEE"/>
@@ -68,15 +69,15 @@
                 </section>
                 <section class="pairs">
                     <label for="first-name" id="first-name-label">Vorname:</label>
-                    <input class="el needs-validation" type="text" id="first-name-input" placeholder="ari">
+                    <input name="first-name" class="el needs-validation" type="text" id="first-name-input" placeholder="ari">
                 </section>
                 <section class="pairs">
                     <label for="last-name" id="last-name-label">Nachname:</label>
-                    <input class="el needs-validation" type="text" id="last-name-input" placeholder="ario">
+                    <input name="last-name" class="el needs-validation" type="text" id="last-name-input" placeholder="ario">
                 </section>
                 <section class="pairs">
                     <label for="email-address" id="email-address-page2">Email-Adresse</label>
-                    <input class="el needs-validation" type="email" id="email-address-input" placeholder="ari@ario.ch">
+                    <input name="email-address" class="el needs-validation" type="email" id="email-address-input" placeholder="ari@ario.ch">
                 </section>
                 <section class="pairs">
                     <label for="birthday" id="birthday-label">Geburtsdatum:</label>
@@ -95,7 +96,7 @@
         <section class="signup-page" id="page3">
             <!-- Page 3 content -->
             <!-- form fields for step 3 -->
-            <form action="" class="form" id="form3" method="post">
+            <form name="third-form" action="" class="form" id="form3" method="post">
                 <section id="logo2">
                     <svg width="40" height="32" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="50" cy="40" rx="50" ry="40" fill="#EEE"/>
@@ -119,11 +120,11 @@
                 </section>
                 <section class="pairs">
                     <label for="tel-p" id="tel-p">Telefon P:</label>
-                    <input class="el" type="tel" id="tel-p-input" placeholder="076 216 11 11">
+                    <input name="tel-p" class="el" type="tel" id="tel-p-input" placeholder="076 216 11 11">
                 </section>
                 <section class="agb">
                     <label for="agb">AGB:</label>
-                    <input class="el" type="radio" id="agb-input">
+                    <input name="agb" class="el" type="radio" id="agb-input">
                 </section>
                 <section class="news">
                     <label for="newsletter" id="newsletter">Newsletter:</label>

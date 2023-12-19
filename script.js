@@ -1,3 +1,6 @@
+// function to Sign in with Gmail will be implemented later
+
+// Sign up 
 let currentPage = 1;
 selectedLanguage = "de";
 
@@ -204,12 +207,50 @@ function confirmationPage(sth) {
     }
 }
 
-function checkValidation(){
-    const requiredElements = document.querySelector(".needs-validation")
-    const arr= Array.prototype.slice.call(requiredElements)
-    arr.forEach(function (element) {
-        if (element.value === "") {
-            console.log("i am inside")
-        }
-      });
-}
+
+//Validation forms
+function checkValidation() {
+    let firstNameElement = document.forms["second-form"]["first-name"];
+    const firstNameValue = firstNameElement.value;
+    let lastNameElement = document.forms["second-form"]["last-name"];
+    const lastNameValue = lastNameElement.value;
+    let emailElement = document.forms["second-form"]["email-address"];
+    const emailValue = emailElement.value;
+
+    let telElement = document.forms["third-form"]["tel-p"];
+    const telValue = telElement.value;
+    let agbElement = document.forms["third-form"]["agb"];
+    const agbValue = agbElement.value;
+    console.log(agbValue, typeof(agbValue))
+
+    // condition is named breakme to be able to be broken like a loop
+    breakme: if (firstNameValue) {
+      firstNameElement.style.backgroundColor = "white";
+    } else if (!firstNameValue) {
+        firstNameElement.style.backgroundColor = "red";
+        return breakme;
+      } 
+      if (lastNameValue) {
+        lastNameElement.style.backgroundColor = "white";
+      } else if (!lastNameValue) {
+        lastNameElement.style.backgroundColor = "red";
+        return breakme;
+      }
+      if (emailValue) {
+        emailElement.style.backgroundColor = "white";
+      } else if (!emailValue) {
+        emailElement.style.backgroundColor = "red";
+        return breakme;
+      }
+      if (telValue) {
+        telElement.style.backgroundColor = "white";
+      } else if (!telValue && currentPage == 3) {
+        telElement.style.backgroundColor = "red";
+        return breakme;
+      }
+      if (!agbElement.value && currentPage==3) {
+        agbElement.style.backgroundColor = "red";
+        alert("OPPS")
+        return breakme;
+      }
+  }
