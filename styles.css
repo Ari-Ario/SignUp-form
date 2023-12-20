@@ -1,10 +1,18 @@
 
 :root {
+    /* cold: */
     --darklight: #0145a4;
 	--dark: #05152E;
 	--darker: #1F2937;
 	--darkest: #001E3C;
 	--grey: #6B7280;
+    /* warm */
+    --green: #2dc937;
+    --lightgreen: #99c140;
+    --yellow: #e7b416;
+    --yellow-red: #db7b2b;
+    --red: #cc3232;
+    /* mixd or speciel */
 	--pink: #EC4899;
 	--purple: #8B5CF6;
 	--light: #EEE;
@@ -94,7 +102,10 @@ body {
 }
 
 .pairs {
-    margin-top: 2vw;
+    margin-top: 3vh;
+}
+.pallet {
+    min-height: 6vh;
 }
 
 .el {
