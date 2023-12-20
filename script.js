@@ -225,31 +225,31 @@ function checkValidation() {
 
     // condition is named breakme to be able to be broken like a loop
     breakme: if (firstNameValue) {
-      firstNameElement.style.backgroundColor = "white";
+      firstNameElement.style.backgroundColor = "#EEE";
     } else if (!firstNameValue) {
-        firstNameElement.style.backgroundColor = "red";
+        firstNameElement.style.backgroundColor = "#EC4899";
         return breakme;
       } 
       if (lastNameValue) {
-        lastNameElement.style.backgroundColor = "white";
+        lastNameElement.style.backgroundColor = "#EEE";
       } else if (!lastNameValue) {
-        lastNameElement.style.backgroundColor = "red";
+        lastNameElement.style.backgroundColor = "#EC4899";
         return breakme;
       }
       if (emailValue) {
-        emailElement.style.backgroundColor = "white";
+        emailElement.style.backgroundColor = "#EEE";
       } else if (!emailValue) {
-        emailElement.style.backgroundColor = "red";
+        emailElement.style.backgroundColor = "#EC4899";
         return breakme;
       }
       if (telValue) {
-        telElement.style.backgroundColor = "white";
+        telElement.style.backgroundColor = "#EEE";
       } else if (!telValue && currentPage == 3) {
-        telElement.style.backgroundColor = "red";
+        telElement.style.backgroundColor = "#EC4899";
         return breakme;
       }
       if (!agbElement.value && currentPage==3) {
-        agbElement.style.backgroundColor = "red";
+        agbElement.style.backgroundColor = "#EC4899";
         alert("OPPS")
         return breakme;
       }
