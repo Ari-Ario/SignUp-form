@@ -15,5 +15,7 @@ sessionStorage() function to save data
 nextPage() to go forward page by page 
 backPage() to go back to a defined page
 
+## Design (link):
+https://www.figma.com/file/yJKCI0jQn1bNXPSMrydxzB/handy?type=design&node-id=0%3A1&mode=dev
 
-
+logo: https://www.figma.com/file/yJKCI0jQn1bNXPSMrydxzB/handy?type=design&node-id=22%3A2&mode=dev

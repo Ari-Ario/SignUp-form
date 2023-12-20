@@ -1,3 +1,4 @@
+
 :root {
     --darklight: #0145a4;
 	--dark: #05152E;
@@ -76,6 +77,13 @@ body {
     text-align: end;
     top: 0;
 }
+#lang-selection{
+    padding: 0;
+    margin: 0;
+    background-color: var(--darker);
+    color: var(--light);
+    border-radius: 6px;
+}
 
 #logo1{
     text-align: center;
@@ -120,6 +128,19 @@ body {
     /* place-self: center center;
     justify-self: center;
     align-self: self-start; */
+}
+
+#agb {
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#gender{
+    padding: 0;
+    margin: 0;
+    background-color: var(--darker);
+    color: var(--light);
+    border-radius: 6px;
 }
 
 .el:hover {

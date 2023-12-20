@@ -210,6 +210,8 @@ function confirmationPage(sth) {
 
 //Validation forms
 function checkValidation() {
+    const validationRed = "#EC4899";
+    const bgColor = "#EEE"
     let firstNameElement = document.forms["second-form"]["first-name"];
     const firstNameValue = firstNameElement.value;
     let lastNameElement = document.forms["second-form"]["last-name"];
@@ -224,33 +226,67 @@ function checkValidation() {
     console.log(agbValue, typeof(agbValue))
 
     // condition is named breakme to be able to be broken like a loop
-    breakme: if (firstNameValue) {
-      firstNameElement.style.backgroundColor = "#EEE";
-    } else if (!firstNameValue) {
-        firstNameElement.style.backgroundColor = "#EC4899";
-        return breakme;
+    breakme: 
+        if (firstNameValue && currentPage===2) {
+            firstNameElement.style.backgroundColor = bgColor;
+        } 
+        else if (!firstNameValue && currentPage===2) {
+          firstNameElement.style.backgroundColor = validationRed;
+          return breakme;
+        }
+
+        if (lastNameValue && currentPage===2) {
+            lastNameElement.style.backgroundColor = bgColor;
+        }
+        else if (!lastNameValue && currentPage===2) {
+            lastNameElement.style.backgroundColor = validationRed;
+            return breakme;
+        }
+
+        if (!emailValue || !validateEmail(emailValue) && currentPage=== 2) {
+            emailElement.style.backgroundColor = validationRed;
+            return breakme;
+        } else if (emailValue && validateEmail(emailValue) && currentPage=== 2) {
+            emailElement.style.backgroundColor = bgColor;
+        }  
+
+      if (telValue && currentPage === 3) {
+        telElement.style.backgroundColor = bgColor;
       } 
-      if (lastNameValue) {
-        lastNameElement.style.backgroundColor = "#EEE";
-      } else if (!lastNameValue) {
-        lastNameElement.style.backgroundColor = "#EC4899";
+      else if (!telValue && currentPage === 3) {
+        telElement.style.backgroundColor = validationRed;
         return breakme;
       }
-      if (emailValue) {
-        emailElement.style.backgroundColor = "#EEE";
-      } else if (!emailValue) {
-        emailElement.style.backgroundColor = "#EC4899";
+
+      if (!agbElement.checked && currentPage===3) {
+        agbElement.style.backgroundColor = validationRed;
+        if (lang == "de"){
+            alert("AGB zustimmen, bitte!")
+        } else if (lang == "en"){
+            alert("accept AGB, please!")
+        }
         return breakme;
-      }
-      if (telValue) {
-        telElement.style.backgroundColor = "#EEE";
-      } else if (!telValue && currentPage == 3) {
-        telElement.style.backgroundColor = "#EC4899";
-        return breakme;
-      }
-      if (!agbElement.value && currentPage==3) {
-        agbElement.style.backgroundColor = "#EC4899";
-        alert("OPPS")
-        return breakme;
-      }
+      } else { return; }
+
+    function validateEmail(emailValue){
+        let emailElement = document.forms["second-form"]["email-address"];
+        const emailVal = emailElement.value;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(emailVal.match(mailformat))
+        {
+            return true;
+        }
+        else
+        {
+            emailElement.style.backgroundColor = "#EC4899";
+            if (selectedLanguage == "de"){
+                alert("Die email Adresse ist nicht gültig!");
+            } else if (selectedLanguage == "en"){
+                alert("You have entered an invalid email address!");
+
+            }
+            return false;
+        }
+    }
   }
+
