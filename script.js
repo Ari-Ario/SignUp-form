@@ -243,30 +243,30 @@ function checkValidation() {
             return breakme;
         }
 
-        if (!emailValue || !validateEmail(emailValue) && currentPage=== 2) {
+        if ((currentPage== 2) && (!emailValue || !validateEmail(emailValue))) {
             emailElement.style.backgroundColor = validationRed;
             return breakme;
         } else if (emailValue && validateEmail(emailValue) && currentPage=== 2) {
             emailElement.style.backgroundColor = bgColor;
-        }  
+        }
 
-      if (telValue && currentPage === 3) {
-        telElement.style.backgroundColor = bgColor;
-      } 
-      else if (!telValue && currentPage === 3) {
-        telElement.style.backgroundColor = validationRed;
-        return breakme;
-      }
+        if (telValue && currentPage === 3) {
+            telElement.style.backgroundColor = bgColor;
+        } 
+        else if (!telValue && currentPage === 3) {
+            telElement.style.backgroundColor = validationRed;
+            return breakme;
+        }
 
-      if (!agbElement.checked && currentPage===3) {
+        if (!agbElement.checked && currentPage===3) {
         agbElement.style.backgroundColor = validationRed;
-        if (lang == "de"){
+        if (selectedLanguage == "de"){
             alert("AGB zustimmen, bitte!")
-        } else if (lang == "en"){
+        } else if (selectedLanguage == "en"){
             alert("accept AGB, please!")
         }
         return breakme;
-      } else { return; }
+        } else { return; }
 
     function validateEmail(emailValue){
         let emailElement = document.forms["second-form"]["email-address"];
