@@ -1,5 +1,23 @@
 // function to Sign in with Gmail will be implemented later
 
+//title image alternative to html
+window.onload = function() {
+    // Create a new image element
+    const img = new Image();
+    img.src = 'Docs/logo-title.png'; // the path to the image
+
+    // Get the existing title element
+    const titleElement = document.querySelector('title');
+
+    // Create a new span element to hold the image
+    const imageSpan = document.createElement('span');
+    imageSpan.appendChild(img);
+
+    // Append the image span to the title element
+    titleElement.appendChild(imageSpan);
+};
+
+
 // Sign up 
 let currentPage = 1;
 selectedLanguage = "de";
