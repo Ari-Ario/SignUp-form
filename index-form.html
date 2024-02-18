@@ -14,13 +14,13 @@
             <!-- Page 1 content -->
             <!-- form fields for step 1 -->
             <form action="" class="form" id="form1" method="post">
-                <section id="language" class="pairs">
+                <div id="language" class="pairs">
                     <select name="language" class="#" id="lang-selection" onchange="changeLanguage(this)">
                         <option value="de" default>Deutsch</option>
                         <option value="en">English</option>
                     </select>
-                </section>
-                <section id="logo1">
+                </div>
+                <div id="logo1">
                     <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="50" cy="40" rx="50" ry="40" fill="#EEEEEE"/>
                         <path d="M29 60.6229V49.7138H31.6367V58.4815H36.1751V60.6229H29Z" fill="#05152E"/>
@@ -49,8 +49,8 @@
                         <path d="M62.3777 71.7358C62.3777 72.536 62.2238 73.2143 61.916 73.7706C61.6083 74.3269 61.1916 74.7495 60.666 75.0384C60.1428 75.3272 59.5557 75.4716 58.9047 75.4716C58.2512 75.4716 57.6629 75.326 57.1397 75.0348C56.6165 74.7436 56.2011 74.321 55.8933 73.767C55.5879 73.2107 55.4352 72.5336 55.4352 71.7358C55.4352 70.9356 55.5879 70.2573 55.8933 69.701C56.2011 69.1446 56.6165 68.7221 57.1397 68.4332C57.6629 68.1444 58.2512 68 58.9047 68C59.5557 68 60.1428 68.1444 60.666 68.4332C61.1916 68.7221 61.6083 69.1446 61.916 69.701C62.2238 70.2573 62.3777 70.9356 62.3777 71.7358ZM60.5808 71.7358C60.5808 71.2623 60.5133 70.8622 60.3784 70.5355C60.2458 70.2088 60.054 69.9614 59.8031 69.7933C59.5545 69.6252 59.255 69.5412 58.9047 69.5412C58.5566 69.5412 58.2572 69.6252 58.0062 69.7933C57.7553 69.9614 57.5623 70.2088 57.4274 70.5355C57.2948 70.8622 57.2285 71.2623 57.2285 71.7358C57.2285 72.2093 57.2948 72.6094 57.4274 72.9361C57.5623 73.2628 57.7553 73.5102 58.0062 73.6783C58.2572 73.8464 58.5566 73.9304 58.9047 73.9304C59.255 73.9304 59.5545 73.8464 59.8031 73.6783C60.054 73.5102 60.2458 73.2628 60.3784 72.9361C60.5133 72.6094 60.5808 72.2093 60.5808 71.7358Z" fill="#05152E"/>
                         </svg>
                                                             
-                </section>
-                <section class="pairs">
+                    </div>
+                <div class="pairs">
                     <label for="email-address" class="pairs" id="email">Email-Adresse</label>
                     <input class="el" type="email" id="email-address" placeholder="ari@ario.ch">
 
@@ -58,13 +58,13 @@
                     <input class="el" type="password" id="password" placeholder="*************">
 
                     <input class="el" type="submit" id="sign-in" value="Anmelden">
-                </section>
-                <section class="pallet"></section>
-                <section class="pairs">
+                </div>
+                <div class="pallet"></div>
+                <div class="pairs">
                     <input class="el pairs" type="submit" id="gmail-sign-in" value="Mit Gmail anmelden">
                     <p class="el" id="or">Oder</p>
                     <input class="el pairs" type="button" id="sign-up" value="registrieren" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'" >
-                </section>
+                </div>
             </form>
         </section>
 
@@ -72,7 +72,7 @@
             <!-- Page 2 content -->
             <!-- form fields for step 2 -->
             <form name="second-form" action="" class="form" id="form2" method="post" onsubmit="validateSecondForm()">
-                <section id="logo2">
+                <div id="logo2">
                     <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="24.5" cy="20" rx="24.5" ry="20" fill="#EEEEEE"/>
                         <path d="M14.21 30.3114V24.8569H15.502V29.2408H17.7258V30.3114H14.21Z" fill="#05152E"/>
@@ -101,37 +101,40 @@
                         <path d="M30.5651 35.8679C30.5651 36.268 30.4897 36.6071 30.3388 36.8853C30.188 37.1635 29.9839 37.3748 29.7263 37.5192C29.47 37.6636 29.1823 37.7358 28.8633 37.7358C28.5431 37.7358 28.2548 37.663 27.9985 37.5174C27.7421 37.3718 27.5385 37.1605 27.3877 36.8835C27.2381 36.6053 27.1632 36.2668 27.1632 35.8679C27.1632 35.4678 27.2381 35.1287 27.3877 34.8505C27.5385 34.5723 27.7421 34.361 27.9985 34.2166C28.2548 34.0722 28.5431 34 28.8633 34C29.1823 34 29.47 34.0722 29.7263 34.2166C29.9839 34.361 30.188 34.5723 30.3388 34.8505C30.4897 35.1287 30.5651 35.4678 30.5651 35.8679ZM29.6846 35.8679C29.6846 35.6312 29.6515 35.4311 29.5854 35.2678C29.5204 35.1044 29.4265 34.9807 29.3035 34.8967C29.1817 34.8126 29.035 34.7706 28.8633 34.7706C28.6928 34.7706 28.546 34.8126 28.423 34.8967C28.3001 34.9807 28.2055 35.1044 28.1394 35.2678C28.0745 35.4311 28.042 35.6312 28.042 35.8679C28.042 36.1046 28.0745 36.3047 28.1394 36.468C28.2055 36.6314 28.3001 36.7551 28.423 36.8391C28.546 36.9232 28.6928 36.9652 28.8633 36.9652C29.035 36.9652 29.1817 36.9232 29.3035 36.8391C29.4265 36.7551 29.5204 36.6314 29.5854 36.468C29.6515 36.3047 29.6846 36.1046 29.6846 35.8679Z" fill="#05152E"/>
                         </svg>
                          
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label id="dear" for="gender">Anrede:</label>
                     <select name="gender" id="gender">
                         <option id="mr" value="Herr">Herr</option>
                         <option id="mrs" value="Frau">Frau</option>
                     </select>
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="first-name" id="first-name-label">Vorname:</label>
                     <input name="first-name" class="el needs-validation" type="text" id="first-name-input" placeholder="ari">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="last-name" id="last-name-label">Nachname:</label>
                     <input name="last-name" class="el needs-validation" type="text" id="last-name-input" placeholder="ario">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="email-address" id="email-address-page2">Email-Adresse</label>
                     <input name="email-address" class="el needs-validation" type="email" id="email-address-input" placeholder="ari@ario.ch">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="birthday" id="birthday-label">Geburtsdatum:</label>
                     <input class="el needs-validation" type="date" id="birthday-input">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="street" id="street-label">Strasse:</label>
                     <input class="el" type="text" id="street-input" placeholder="Sonneggstrasse 11">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
+                    <input class="el back-btn" id="back" type="button" value="zurück" onclick="backPage(2)" onmouseover="this.style.backgroundColor='#db7b2b'" onmouseout="this.style.backgroundColor='#EEE'">
+                </div>
+                <div class="pairs">
                 <input class="el" id="next-page" type="button" value="weiter" onclick="nextPage()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
-                </section>
+                </div>
             </form>
         </section>
         
@@ -139,7 +142,7 @@
             <!-- Page 3 content -->
             <!-- form fields for step 3 -->
             <form name="third-form" action="" class="form" id="form3" method="post">
-                <section id="logo2">
+                <div id="logo2">
                     <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="24.5" cy="20" rx="24.5" ry="20" fill="#EEEEEE"/>
                         <path d="M14.21 30.3114V24.8569H15.502V29.2408H17.7258V30.3114H14.21Z" fill="#05152E"/>
@@ -167,38 +170,41 @@
                         <path d="M26.6608 34.0497V37.6861H25.7995V34.0497H26.6608Z" fill="#05152E"/>
                         <path d="M30.5651 35.8679C30.5651 36.268 30.4897 36.6071 30.3388 36.8853C30.188 37.1635 29.9839 37.3748 29.7263 37.5192C29.47 37.6636 29.1823 37.7358 28.8633 37.7358C28.5431 37.7358 28.2548 37.663 27.9985 37.5174C27.7421 37.3718 27.5385 37.1605 27.3877 36.8835C27.2381 36.6053 27.1632 36.2668 27.1632 35.8679C27.1632 35.4678 27.2381 35.1287 27.3877 34.8505C27.5385 34.5723 27.7421 34.361 27.9985 34.2166C28.2548 34.0722 28.5431 34 28.8633 34C29.1823 34 29.47 34.0722 29.7263 34.2166C29.9839 34.361 30.188 34.5723 30.3388 34.8505C30.4897 35.1287 30.5651 35.4678 30.5651 35.8679ZM29.6846 35.8679C29.6846 35.6312 29.6515 35.4311 29.5854 35.2678C29.5204 35.1044 29.4265 34.9807 29.3035 34.8967C29.1817 34.8126 29.035 34.7706 28.8633 34.7706C28.6928 34.7706 28.546 34.8126 28.423 34.8967C28.3001 34.9807 28.2055 35.1044 28.1394 35.2678C28.0745 35.4311 28.042 35.6312 28.042 35.8679C28.042 36.1046 28.0745 36.3047 28.1394 36.468C28.2055 36.6314 28.3001 36.7551 28.423 36.8391C28.546 36.9232 28.6928 36.9652 28.8633 36.9652C29.035 36.9652 29.1817 36.9232 29.3035 36.8391C29.4265 36.7551 29.5204 36.6314 29.5854 36.468C29.6515 36.3047 29.6846 36.1046 29.6846 35.8679Z" fill="#05152E"/>
                         </svg>
-                </section>
-                <section class="pairs" id="address">
+                    </div>
+                <div class="pairs" id="address">
                         <label for="plz" id="plz">PLZ:</label>
                         <input class="el" type="number" id="plz-input" placeholder="8004">
-                </section>
-                <section class="pairs" id="address">
+                </div>
+                <div class="pairs" id="address">
                         <label for="ort" id="place">Ort:</label>
                         <input class="el" type="text" id="ort-input" placeholder="Zürich">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="tel-g" id="tel-g">Telefon G:</label>
                     <input class="el" type="tel" id="tel-g-input" placeholder="088 888 44 44">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="tel-p" id="tel-p">Telefon P:</label>
                     <input name="tel-p" class="el" type="tel" id="tel-p-input" placeholder="076 216 11 11">
-                </section>
-                <section class="agb">
+                </div>
+                <div class="agb">
                     <label for="agb" id="agb"><a href="Docs/AGB.pdf" target="_blank">AGB</a></label>
                     <input name="agb" class="el" type="radio" id="agb-input">
-                </section>
-                <section class="news">
+                </div>
+                <div class="news">
                     <label for="newsletter" id="newsletter">Newsletter:</label>
                     <input class="el" type="checkbox" id="newsletter-input">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
                     <label for="remark" id="remark">Bemerkung:</label>
                     <input class="el" type="text" id="remark" placeholder="bla pla tla">
-                </section>
-                <section class="pairs">
+                </div>
+                <div class="pairs">
+                    <input class="el back-btn" id="back" type="button" value="zurück" onclick="backPage(3)" onmouseover="this.style.backgroundColor='#db7b2b'" onmouseout="this.style.backgroundColor='#EEE'">
+                </div>
+                <div class="pairs">
                 <input class="el" id="check" type="button" value="überprüfen" onclick="storeValues()" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
-                </section>
+                </div>
             </form>
         </section>
 
@@ -206,7 +212,7 @@
             <!-- Page 4 content -->
             <!-- form fields for step 4 -->
             <form action="" class="form" id="form4" method="post">
-                <section id="logo2">
+                <div id="logo2">
                     <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="24.5" cy="20" rx="24.5" ry="20" fill="#EEEEEE"/>
                         <path d="M14.21 30.3114V24.8569H15.502V29.2408H17.7258V30.3114H14.21Z" fill="#05152E"/>
@@ -235,22 +241,24 @@
                         <path d="M30.5651 35.8679C30.5651 36.268 30.4897 36.6071 30.3388 36.8853C30.188 37.1635 29.9839 37.3748 29.7263 37.5192C29.47 37.6636 29.1823 37.7358 28.8633 37.7358C28.5431 37.7358 28.2548 37.663 27.9985 37.5174C27.7421 37.3718 27.5385 37.1605 27.3877 36.8835C27.2381 36.6053 27.1632 36.2668 27.1632 35.8679C27.1632 35.4678 27.2381 35.1287 27.3877 34.8505C27.5385 34.5723 27.7421 34.361 27.9985 34.2166C28.2548 34.0722 28.5431 34 28.8633 34C29.1823 34 29.47 34.0722 29.7263 34.2166C29.9839 34.361 30.188 34.5723 30.3388 34.8505C30.4897 35.1287 30.5651 35.4678 30.5651 35.8679ZM29.6846 35.8679C29.6846 35.6312 29.6515 35.4311 29.5854 35.2678C29.5204 35.1044 29.4265 34.9807 29.3035 34.8967C29.1817 34.8126 29.035 34.7706 28.8633 34.7706C28.6928 34.7706 28.546 34.8126 28.423 34.8967C28.3001 34.9807 28.2055 35.1044 28.1394 35.2678C28.0745 35.4311 28.042 35.6312 28.042 35.8679C28.042 36.1046 28.0745 36.3047 28.1394 36.468C28.2055 36.6314 28.3001 36.7551 28.423 36.8391C28.546 36.9232 28.6928 36.9652 28.8633 36.9652C29.035 36.9652 29.1817 36.9232 29.3035 36.8391C29.4265 36.7551 29.5204 36.6314 29.5854 36.468C29.6515 36.3047 29.6846 36.1046 29.6846 35.8679Z" fill="#05152E"/>
                         </svg>
                         
-                <section class="pairs" id="info">
+                <div class="pairs" id="info">
                         <p id="info-output"></p>
-                </section>
-                <section class="pairs">
-                    <input class="el" id="back" type="button" value="zurück" onclick="backPage(4)" onmouseover="this.style.backgroundColor='#db7b2b'" onmouseout="this.style.backgroundColor='#EEE'">
-                </section>
-                <section class="pairs">
-                    <input class="el" id="send" type="button" value="Absenden" onclick="confirmationPage(this)" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
-                </section>
+                </div>
+                <section id="back-send">
+                    <div class="pairs">
+                        <input class="el back-btn" id="back" type="button" value="zurück" onclick="backPage(4)" onmouseover="this.style.backgroundColor='#db7b2b'" onmouseout="this.style.backgroundColor='#EEE'">
+                    </div>
+                    <div class="pairs">
+                        <input class="el last-btn" id="send" type="button" value="Absenden" onclick="confirmationPage(this)" onmouseover="this.style.backgroundColor='#8B5CF6'" onmouseout="this.style.backgroundColor='#EEE'">
+                    </div>
+            </section>
             </form>
         </section>
 
         <section class="signup-page" id="page5">
             <!-- Page 5 content: submision confirmation -->
             <form action="" class="form" id="form5" method="post">
-                <section id="logo2">
+                <div id="logo2">
                     <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="24.5" cy="20" rx="24.5" ry="20" fill="#EEEEEE"/>
                         <path d="M14.21 30.3114V24.8569H15.502V29.2408H17.7258V30.3114H14.21Z" fill="#05152E"/>
@@ -279,10 +287,15 @@
                         <path d="M30.5651 35.8679C30.5651 36.268 30.4897 36.6071 30.3388 36.8853C30.188 37.1635 29.9839 37.3748 29.7263 37.5192C29.47 37.6636 29.1823 37.7358 28.8633 37.7358C28.5431 37.7358 28.2548 37.663 27.9985 37.5174C27.7421 37.3718 27.5385 37.1605 27.3877 36.8835C27.2381 36.6053 27.1632 36.2668 27.1632 35.8679C27.1632 35.4678 27.2381 35.1287 27.3877 34.8505C27.5385 34.5723 27.7421 34.361 27.9985 34.2166C28.2548 34.0722 28.5431 34 28.8633 34C29.1823 34 29.47 34.0722 29.7263 34.2166C29.9839 34.361 30.188 34.5723 30.3388 34.8505C30.4897 35.1287 30.5651 35.4678 30.5651 35.8679ZM29.6846 35.8679C29.6846 35.6312 29.6515 35.4311 29.5854 35.2678C29.5204 35.1044 29.4265 34.9807 29.3035 34.8967C29.1817 34.8126 29.035 34.7706 28.8633 34.7706C28.6928 34.7706 28.546 34.8126 28.423 34.8967C28.3001 34.9807 28.2055 35.1044 28.1394 35.2678C28.0745 35.4311 28.042 35.6312 28.042 35.8679C28.042 36.1046 28.0745 36.3047 28.1394 36.468C28.2055 36.6314 28.3001 36.7551 28.423 36.8391C28.546 36.9232 28.6928 36.9652 28.8633 36.9652C29.035 36.9652 29.1817 36.9232 29.3035 36.8391C29.4265 36.7551 29.5204 36.6314 29.5854 36.468C29.6515 36.3047 29.6846 36.1046 29.6846 35.8679Z" fill="#05152E"/>
                         </svg>
                            
-                </section>
-                <section class="pairs" id="info">
-                        <p id="information-sent"></p>
-                </section>
+                </div>
+                    <div class="pairs" id="info">
+                            <p id="information-sent"></p>
+                    </div>
+                <section id="back-send">
+                    <div class="pairs">
+                        <input class="el home-btn last-btn" id="home" type="button" value="Startseite" onclick="backPage(2)" onmouseover="this.style.backgroundColor='#db7b2b'" onmouseout="this.style.backgroundColor='#EEE'">
+                    </div>
+            </section>
             </form>
         </section>
     </main>

@@ -22,6 +22,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Fira sans", sans-serif;
+    font-size: medium;
 }
 
 body {
@@ -41,11 +42,10 @@ body {
     align-items: center;
     /* display: block;
     text-align: center; */
-    padding: 0;
+    padding: 2vw;
     margin: 0;
-    width: 400px;
-    max-height: 80vh;
-    min-height: 80vh;
+    width: 40vw;
+    height: 88vh;
     border-radius: 20px;
     background-color: var(--dark);
     box-shadow: 2px 4px 10px var(--darkest);
@@ -56,29 +56,36 @@ body {
     display: flex;
     text-align: center;
     margin: 0;
-    padding: 30px;
+    padding: 0;
     height: 100%;
-    max-width: 440px;
+    width: 100%;
     max-height: 100vh;
 }
 
 #page2, #page3, #page4, #page5 {
     display: none;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid white; */
+}
+#form1, #form2, #form3, #form4, #form5{
+    padding: 0;
+    margin: 0;
 }
 
 .form {
     display: block;
     text-align: left;
-    padding: 30px;
+    padding: 0;
+    margin: 0;
     top: 0;
-
     box-sizing: border-box;
     float: left;
     clear: both;
 }
 
 #form3{
-    padding: 20px;
+    padding: 0;
 }
 
 #language {
@@ -95,14 +102,14 @@ body {
 
 #logo1{
     text-align: center;
-    margin-bottom: 78px;
+    margin-bottom: 6vh;
 }
 #logo2 {
     text-align: center;
 }
 
 .pairs {
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 .pallet {
     min-height: 6vh;
@@ -154,11 +161,24 @@ body {
     border-radius: 6px;
 }
 
+#info {
+    text-align: left;
+}
+#back-send {
+    position: absolute;
+    top: auto;
+    bottom: 12vh;
+    max-width: 40vw;
+}
+.last-btn {
+    width: 36vw;
+}
+
 .el:hover {
 	opacity: 0.8;
 }
 
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     body {
         background-color: var(--dark);
@@ -170,27 +190,41 @@ body {
 
     .signup-container {
         border-radius: 0px;
+        width: 90vw;
         height: 100vh;
+        text-align: center;
     }
 
     .form {
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         padding: 0px;
         margin: 0px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        /* border: 1px solid white; */
+        margin: 0 10vw;
+    }
+    #form2, #form3, #form4, #form5{
+        padding: 0 8vw;
+        margin: 0 ;
     }
 
-/*     #form3 {
-        padding: 0 20px 0 20px;
-    } */
-
+    #back-send {
+        position: absolute;
+        top: auto;
+        bottom: 12vh;
+        width: 100%;
+        height: fit-content;
+    }
+    .last-btn, .back-send {
+        width: 100vw;
+    }
+    
     .pairs {
-        margin: 10px 0 10px 0;
+        margin: 1vh 0 1vh 0;
     }
-
     .el {
         margin: 10px 0 10px 0;
         width: 100%;
@@ -201,9 +235,6 @@ body {
         padding: 0;
         margin: 0;
         max-height: 30px;
-        /* place-self: center center;
-        justify-self: center;
-        align-self: self-start; */
     }
     #newsletter {
         max-width: 50vw;
@@ -217,5 +248,5 @@ body {
         box-sizing: 50%;
         margin: 0;
         border: initial;
-    }
-  }
+    } 
+}

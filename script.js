@@ -43,11 +43,7 @@ function nextPage() {
 }
 
 function backPage(pagenumber){
-    if (pagenumber == 4){
-        currentPage = 2;
-    } else if (pagenumber === 5){
-        currentPage = 1;
-    }
+    currentPage = pagenumber-1;
     const displayPage = document.getElementById(`page${pagenumber}`);
     displayPage.style.display = "none";
     const newPage = document.getElementById(`page${currentPage}`)
@@ -98,7 +94,9 @@ function changeLanguage(lang){
     const check = document.getElementById("check")
 
     // elements of fourth page
-    const back = document.getElementById("back")
+    const back = document.querySelectorAll(".back-btn")
+    const home = document.getElementById("home")
+
     const send = document.getElementById("send")
 
     // elements of fifth page
@@ -131,8 +129,10 @@ function changeLanguage(lang){
         // newsLetter.innerHTML= ""
         remark.innerHTML= "Remark"
         check.value= "Check"
-
-        back.value= "Review"
+        back.forEach(backwards => {
+            backwards.value = "Back";
+        })
+        home.value = "Home"
         send.value= "Send"
 
         informationSent.innerHTML= "Your information was sent successfully."
@@ -221,7 +221,8 @@ function confirmationPage(sth) {
         return;
     } else {
         nextPage();
-        setTimeout(function(){backPage(5)}, 5000);
+        setTimeout(function(){location.reload();}, 5000);
+
     }
 }
 
