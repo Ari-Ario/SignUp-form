@@ -43,7 +43,12 @@ function nextPage() {
 }
 
 function backPage(pagenumber){
-    currentPage = pagenumber-1;
+    if (pagenumber === 5) {
+        currentPage = 1
+    } else {
+
+        currentPage = pagenumber-1;
+    }
     const displayPage = document.getElementById(`page${pagenumber}`);
     displayPage.style.display = "none";
     const newPage = document.getElementById(`page${currentPage}`)
